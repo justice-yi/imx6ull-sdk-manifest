@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- 本地阶段：源仓库区就是"服务器"。推 GitHub 后只需把这行改成
+       https://github.com/justice-yi —— 其余一字不动 -->
+  <remote name="origin" fetch="/home/justiceliang/home_workspace" />
+
+  <default remote="origin" revision="master" sync-j="8" />
+
+  <!-- name 同时匹配两件事：本地源仓库的目录名 + 将来 GitHub 的仓库名
+       （kernel/uboot/tools 已存在于你的 GitHub；后两个届时新建）。
+       path 是拉到 SDK 里的目录名，取短名好用。 -->
+  <project name="linux-imx-git.kernel.org-linux-stable-linux-5.15.y" path="kernel" />
+  <project name="uboot-imx"         path="uboot" />
+  <project name="buildroot"         path="buildroot" />
+  <project name="tools"             path="tools" />
+  <project name="imx6ull-sdk-build" path="build" />
+
+  <!-- Yocto 预留：建好 imx6ull-yocto 源仓库后取消注释；平时 repo sync
+       不拉它（不在 default 分组），需要时 repo sync -g yocto -->
+  <!-- <project name="imx6ull-yocto" path="yocto" groups="yocto" /> -->
+</manifest>
