@@ -2,7 +2,7 @@
 <manifest>
   <!-- 本地阶段：源仓库区就是"服务器"。推 GitHub 后只需把这行改成
        https://github.com/justice-yi —— 其余一字不动 -->
-  <remote name="origin" fetch="/home/justiceliang/home_workspace" />
+  <remote name="origin" fetch="https://github.com/justice-yi" />
 
   <default remote="origin" revision="master" sync-j="8" />
 
@@ -11,7 +11,7 @@
        path 是拉到 SDK 里的目录名，取短名好用。 -->
   <project name="linux-imx-git.kernel.org-linux-stable-linux-5.15.y" path="kernel" />
   <project name="uboot-imx"         path="uboot" />
-  <project name="buildroot"         path="buildroot" />
+  <project name="buildroot22.2" path="buildroot" />
   <project name="tools"             path="tools" />
   <project name="imx6ull-sdk-build" path="build" />
 
